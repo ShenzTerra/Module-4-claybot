@@ -1,6 +1,7 @@
 
 import React from 'react';
 import ClayButton from '../components/ClayButton';
+import Logo from '../components/Logo';
 
 interface IntroProps {
   onStart: () => void;
@@ -8,12 +9,12 @@ interface IntroProps {
 
 const Intro: React.FC<IntroProps> = ({ onStart }) => {
   return (
-    <div className="flex flex-col items-center text-center py-12">
+    <div className="flex flex-col items-center text-center py-8">
       <div className="relative mb-12">
-        <div className="w-40 h-40 bg-orange-500 rounded-[2.5rem] animate-morph flex items-center justify-center shadow-2xl border-4 border-white/20">
-          <span className="text-7xl">📂</span>
+        <div className="w-44 h-44 bg-slate-800/40 rounded-[3rem] border-4 border-slate-700 flex items-center justify-center shadow-2xl backdrop-blur-md">
+          <Logo variant="full" className="scale-125" />
         </div>
-        <div className="absolute -top-4 -right-4 bg-yellow-400 text-black font-black px-4 py-2 rounded-2xl rotate-12 shadow-lg">
+        <div className="absolute -top-4 -right-8 bg-yellow-400 text-black font-black px-4 py-2 rounded-2xl rotate-12 shadow-lg animate-bounce">
           Module 4
         </div>
       </div>
@@ -24,12 +25,12 @@ const Intro: React.FC<IntroProps> = ({ onStart }) => {
       </h2>
       
       <p className="text-xl text-slate-300 max-w-2xl mb-12 leading-relaxed font-medium">
-        Welcome to the Logic Lab! Today we're learning how computers <strong>remember</strong> things. 
+        Welcome to the Million Coders Logic Lab! Today we're learning how computers <strong>remember</strong> things. 
         Think of a variable as a labeled box that holds your game's secrets!
       </p>
 
       <ClayButton onClick={onStart} color="orange" size="lg" className="px-16 py-6 shadow-[0_10px_0_#c2410c]">
-        Enter the Lab
+        Start Coding!
       </ClayButton>
 
       <div className="mt-20 grid grid-cols-1 md:grid-cols-3 gap-8 w-full">

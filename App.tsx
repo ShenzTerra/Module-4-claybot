@@ -7,6 +7,7 @@ import Lesson42 from './modules/Lesson42';
 import CatchStarsGame from './modules/CatchStarsGame';
 import QuizSection from './modules/QuizSection';
 import CompletionScreen from './modules/CompletionScreen';
+import Logo from './components/Logo';
 
 const App: React.FC = () => {
   const [currentStep, setCurrentStep] = useState<ModuleStep>(ModuleStep.INTRO);
@@ -38,11 +39,14 @@ const App: React.FC = () => {
   return (
     <div className="min-h-screen relative pb-20">
       {/* Header */}
-      <header className="pt-8 px-6 text-center">
+      <header className="pt-6 px-6 flex flex-col items-center">
+        <div className="mb-4">
+          <Logo variant="full" className="scale-75 md:scale-90" />
+        </div>
         <div className="inline-flex items-center gap-4 px-6 py-2 bg-slate-800/50 rounded-full border border-slate-700 backdrop-blur-md">
-          <div className="w-4 h-4 rounded-full bg-yellow-400 animate-pulse shadow-[0_0_10px_rgba(250,204,21,0.5)]"></div>
-          <h1 className="text-xl md:text-2xl font-bold tracking-tight">
-            ClayBot Logic Lab <span className="text-slate-500 mx-2">•</span> 
+          <div className="w-3 h-3 rounded-full bg-yellow-400 animate-pulse shadow-[0_0_10px_rgba(250,204,21,0.5)]"></div>
+          <h1 className="text-base md:text-xl font-bold tracking-tight">
+            Logic Lab <span className="text-slate-500 mx-1">•</span> 
             <span className="bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">
               Module 4: Variables
             </span>
@@ -60,7 +64,7 @@ const App: React.FC = () => {
         />
       </div>
 
-      <main className="max-w-4xl mx-auto px-4 mt-12">
+      <main className="max-w-4xl mx-auto px-4 mt-8">
         {renderStep()}
       </main>
 
