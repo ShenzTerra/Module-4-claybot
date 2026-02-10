@@ -7,12 +7,12 @@ interface LogoProps {
 }
 
 const Logo: React.FC<LogoProps> = ({ className = '', variant = 'full' }) => {
-  // Assuming the PNG file is named 'logo.png' and placed in the project root/public directory.
+  // Assuming the PNG file is named 'Million Coders Logo_BLK.png' and placed in the project root/public directory.
   // The 'full' variant shows the complete logo, while 'icon' could be used for smaller headers.
   return (
     <div className={`flex flex-col items-center select-none ${className}`}>
       <img 
-        src="logo.png" 
+        src="Million Coders Logo_BLK.png" 
         alt="Million Coders Logo" 
         className={`${variant === 'full' ? 'w-48 md:w-64' : 'w-12 md:w-16'} h-auto object-contain transition-transform duration-300 hover:scale-105`}
         onError={(e) => {
